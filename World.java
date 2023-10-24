@@ -1,16 +1,27 @@
 /* World class for modeling the entire in-game world
  */
 
-class World {
+class World{
   Space entry;
+
   
   World () {
-    Space entry    = new Space("gang");
-    Space gang = new Space("gang");
-    Space klasselokale = new Space("klasselokale");
-    Space klasselokaleUnderEtagen = new Space("klasselokale");
-    Space underetagen = new Space("underetagen");
-    Space udenfor  = new Space("udenfor");
+
+    String hvdGangMed = "Du står i en situation, hvor en skoleskyder er inde på skolen og skyder på alt der bevæger sig. " + "\n"+
+            "Du har evner til at interagere med objekter og gemme dem i din inventory, det vil øge din chance for at komme igennem spillet. " + "\n"+
+            "Din opgave er at tage de rigtige beslutninger før tiden løber ud og for at komme ud i god behold og i sikkerhed. ";
+    String klsMed = "";
+    String gngMed = "Din chance for at overleve på en åben gang er meget lille. Skoleskyderen vil have muligheden for at dukke op og skyde efter dig." + "\n" + "Det er op til dig at finde en udvej og slippe væk fra skyderen. Du har nu muligheden for at fortsætte ned af gangen, gemme dig i et klasselokale eller gå ned af trappen til underetagen. ";
+    String kluetMed ="Hi";
+    String udenforMed = "Hello";
+    String nedenunderMed = "Hey";
+
+    Space entry    = new Space("hovedgang " + "\n" +hvdGangMed);
+    Space gang = new Space("gang "+ "\n" + gngMed);
+    Space klasselokale = new Space("klasselokale "+ "\n" + klsMed);
+    Space klasselokaleUnderEtagen = new Space("klasselokale "+  "\n" +kluetMed);
+    Space underetagen = new Space("underetagen "+ "\n" +udenforMed);
+    Space udenfor  = new Space("udenfor "+ "\n" +nedenunderMed);
     
     entry.addEdge("klasselokale", klasselokale);
     entry.addEdge("underetagen", underetagen);
@@ -23,12 +34,14 @@ class World {
     underetagen.addEdge("gang", gang);
     underetagen.addEdge("udenfor", udenfor);
 
-    
+
     this.entry = entry;
   }
   
   Space getEntry () {
     return entry;
   }
+
+
 }
 

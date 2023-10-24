@@ -7,7 +7,11 @@ class Space extends Node {
   Space (String name) {
     super(name);
   }
-  
+
+  public Space(String gang, Context.RoomDescription gangDescription) {
+    super(gang);
+  }
+
   public void welcome () {
     System.out.println("Du er nu ved "+name);
     Set<String> exits = edges.keySet();
@@ -16,7 +20,7 @@ class Space extends Node {
       System.out.println(" - "+exit);
     }
   }
-  
+
   public void goodbye () {
   }
   

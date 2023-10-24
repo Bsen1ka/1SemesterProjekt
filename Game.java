@@ -9,6 +9,7 @@ class Game {
   static Command  fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
   static Scanner  scanner  = new Scanner(System.in);
+
   
   private static void initRegistry () {
     Command cmdExit = new CommandExit();
@@ -20,8 +21,13 @@ class Game {
   }
   
   public static void main (String args[]) {
-    System.out.println("Velkommen til World of Zuul!");
-    
+    System.out.println("Velkommen til World of evacuation!");
+    System.out.println("Advarsel dette spil simulerer skoleskyderi, hvis du har PTSD eller traumatiske oplevelser med ligne burde du lukke spillet");
+
+    Inventory inventory = new Inventory();
+
+
+
     initRegistry();
     context.getCurrent().welcome();
     
