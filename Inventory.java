@@ -1,31 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class InventoryItem {
-    private String name;
-    private int quantity;
-
-    public InventoryItem(String name, int quantity) {
-        this.name = name;
-        this.quantity = quantity;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-}
-
 
 public class Inventory {
-    private List<InventoryItem> items;
+    public List<InventoryItem> items;
 
     public Inventory() {
         items = new ArrayList<>();
@@ -54,4 +32,7 @@ public class Inventory {
         }
     }
 }
+
+
+
 

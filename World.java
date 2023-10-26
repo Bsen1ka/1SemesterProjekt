@@ -1,7 +1,7 @@
 /* World class for modeling the entire in-game world
  */
 
-class World{
+class World {
   Space entry;
 
   
@@ -16,28 +16,31 @@ class World{
     String udenforMed = "Hello";
     String nedenunderMed = "Hey";
 
-    Space entry    = new Space("hovedgang " + "\n" +hvdGangMed);
-    Space gang = new Space("gang "+ "\n" + gngMed);
-    Space klasselokale = new Space("klasselokale "+ "\n" + klsMed);
-    Space klasselokaleUnderEtagen = new Space("klasselokale "+  "\n" +kluetMed);
-    Space underetagen = new Space("underetagen "+ "\n" +udenforMed);
-    Space udenfor  = new Space("udenfor "+ "\n" +nedenunderMed);
-    
+    Space entry    = new Space("hovedgang ",hvdGangMed);
+    Space gang = new Space("gang ",gngMed);
+    Space klasselokale = new Space("klasselokale ",klsMed);
+    Space klasselokaleUnderEtagen = new Space("klasselokaleUnderEtagen ", kluetMed);
+    Space underetagen = new Space("underetagen ",udenforMed);
+    Space udenfor  = new Space("udenfor ",nedenunderMed);
+
     entry.addEdge("klasselokale", klasselokale);
     entry.addEdge("underetagen", underetagen);
     entry.addEdge("gang",gang);
+
     gang.addEdge("klasselokale", klasselokale);
     gang.addEdge("underetagen",underetagen);
+
     klasselokale.addEdge("gang", gang);
     klasselokaleUnderEtagen.addEdge("udenfor", udenfor);
-    underetagen.addEdge("klasselokaleunderetagen", klasselokaleUnderEtagen);
+
+    underetagen.addEdge("klasselokale2", klasselokaleUnderEtagen);
     underetagen.addEdge("gang", gang);
     underetagen.addEdge("udenfor", udenfor);
 
 
     this.entry = entry;
   }
-  
+
   Space getEntry () {
     return entry;
   }

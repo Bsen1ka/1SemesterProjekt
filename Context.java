@@ -3,30 +3,16 @@
 
 class Context {
   Space current;
+
   boolean done = false;
 
   Context (Space node) {
     current = node;
   }
-  class RoomDescription {
-    private String description;
 
-    RoomDescription(String description) {
-      this.description = description;
-    }
-
-    public String getDescription() {
-      return description;
-    }
-
-    public void udenfor() {
-      System.out.println("Sup");
-    }
-  }
   public Space getCurrent() {
     return current;
   }
-
   public void transition (String direction) {
     Space next = current.followEdge(direction);
     if (next==null) {
