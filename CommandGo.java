@@ -28,5 +28,8 @@ class CommandGo extends BaseCommand implements Command {
       System.out.println("- forbinding");
       System.out.println("der ligger en forblødene elev på gulvet, vil du hjælpe ham?");
     }
+    if (Objects.equals(context.getCurrent().getName(), "udenfor ")) {
+      System.out.println("du klarede det");
+      context.makeDone();}
   }
   }
