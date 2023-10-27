@@ -9,7 +9,7 @@ public class CommandInventory extends BaseCommand implements Command{
     @Override
     public void execute(Context context, String command, String[] parameters) {
          if (Objects.equals(context.getCurrent().getName(), "klasselokale ") ||
-                 Objects.equals(context.getCurrent().getName(), "klasselokale "))  {
+                 Objects.equals(context.getCurrent().getName(), "klasselokaleUnderEtagen "))  {
              if (guardEq(parameters, 1)) {
                  inventory.displayInventory();
              }
@@ -26,7 +26,6 @@ public class CommandInventory extends BaseCommand implements Command{
          } else {
              inventory.displayInventory();
         }
-
     }
 }
 

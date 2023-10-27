@@ -33,7 +33,7 @@ class World {
     klasselokale.addEdge("gang", gang);
     klasselokaleUnderEtagen.addEdge("udenfor", udenfor);
 
-    underetagen.addEdge("klasselokale2", klasselokaleUnderEtagen);
+    underetagen.addEdge("klasselokaleUnderEtagen", klasselokaleUnderEtagen);
     underetagen.addEdge("gang", gang);
     underetagen.addEdge("udenfor", udenfor);
 

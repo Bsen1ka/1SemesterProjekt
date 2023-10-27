@@ -21,5 +21,12 @@ class CommandGo extends BaseCommand implements Command {
       System.out.println("- bord");
       System.out.println("- forbinding");
     }
+    if (Objects.equals(context.getCurrent().getName(), "klasselokaleUnderEtagen ")) {
+      System.out.println(" ");
+      System.out.println("Mulige objekter at samle op: ");
+      System.out.println("- bord");
+      System.out.println("- forbinding");
+      System.out.println("der ligger en forblødene elev på gulvet, vil du hjælpe ham?");
+    }
   }
-}
+  }
